@@ -1,0 +1,236 @@
+html {
+  font-size: 62.5%; /* 16px * 62.5 = 10px = 1rem */
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  font-size: 16px;
+  background-color: #eeeeee;
+  font-family: 'Poppins', arial, sans-serif;
+}
+
+/* Layout */
+
+
+header {
+  background-color: #ffffff;
+  padding: 20px 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 2px solid black;
+}
+
+/* Header: */
+header a {
+  color: #000000;
+  padding: 20px;
+  text-decoration: none;
+  font-weight: 600;
+}
+header a:hover {
+  color: #383b39;
+}
+
+a.brand {
+  color: #000000;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.signin {
+  display: inline-block;
+}
+a.sign-in-option {
+  top: 0;
+  margin-top: -20px;
+  font-weight: 700;
+}
+
+img.menu-icon {
+  cursor: pointer;
+  margin-bottom: -2px;
+}
+
+.input > img {
+  z-index: 999;
+}
+
+.search-icon-box {
+  display: inline-block;
+  padding: 10px 17px;
+  margin-right: -10px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  background-color: #fcc5f9;
+  z-index: 999;
+}
+.search-icon-box i {
+  font-size: 16px;
+}
+
+.search-input {
+  background: linear-gradient(75deg, #fcc5f9 10%, #F5DCFF 90%);
+  border: 0;
+  padding: 13px 10px 12px 3px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  width: 350px;
+  color: #000000;
+  font-size: 17px;
+  margin-left: 0px;
+  z-index: 99;
+}
+
+input.search-input:focus {
+  outline-width: 0;
+}
+
+.search-input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  opacity: 1; /* Firefox */
+  color: #404040;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart {
+  display: inline-block;
+  position: relative;
+}
+
+img.cart-icon {
+  position: relative;
+  margin-bottom: -10px;
+  margin-right: -20px;
+}
+
+.cart-items-circle{
+  display: inline-block;
+  background-color: #7159C1;
+  border-radius: 50%;
+  /*max-height: 10px;*/
+  margin-left: -23px;
+  position: absolute;
+  bottom: 0;
+  width: 10px;
+  height: 10px;
+  padding: 8px;
+  color: #000;
+  text-align: center;
+  font: 16px Arial, sans-serif;
+}
+.cart-items-circle p{
+  display: inline-block;
+  color: #ffffff;
+  margin-top: -10px !important;
+  margin-bottom: 15px;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+/* Main */
+
+main {
+  background-color: #ffffff;
+  margin-top: -40px;
+}
+
+.main-wrapper {
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+
+.main-banner {
+  width: 100%;
+  height: 650px;
+  margin-top: -60px;
+  background-color: #ffffff;
+  background-image: url('assets/nike-ads.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* Card */
+
+.card img {
+  border-radius: 0.5rem;
+}
+
+.card img.medium {
+  max-width: 240px;
+  width: 100%;
+}
+
+.card {
+  padding: 20px 50px;
+  text-align: left;
+  margin-bottom: 35px;
+  margin-bottom: 10px;
+}
+
+.card-body a {
+  color: #000;
+  text-decoration: none;
+}
+
+.card-body h3 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.card-body p {
+  max-width: 240px;
+  font-size: 15px;
+  color: #808080;
+  font-weight: 300;
+  margin-bottom: -7px;
+  margin-top: -10px;
+}
+
+.card-body i {
+  color: #f0c040;
+  font-size: 15px;
+}
+
+.card-body h2 {
+  font-size: 20px;
+}
+
+.card .row {
+  margin-bottom: 30px;
+}
+
+
+
+/* footer */
+
+footer {
+  background: linear-gradient(45deg, #000000, #383b39);
+  color: #ffffff;
+  padding: 20px 0 150px 0;
+}
+
+.row.center {
+  justify-content: center;
+  text-align: center;
+}
+
+footer p.credits a {
+  color: #ffffff;
+}
+footer p.credits a:hover {
+  text-decoration: none;
+}
+

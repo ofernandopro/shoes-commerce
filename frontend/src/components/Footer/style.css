@@ -1,0 +1,25 @@
+footer {
+  background: linear-gradient(45deg, #000000, #383b39);
+  color: #ffffff;
+  padding: 20px 0 150px 0;
+}
+
+.row.center {
+  justify-content: center;
+  text-align: center;
+}
+
+footer p.credits {
+  font-weight: 600;
+}
+
+p.credits a {
+  color: #ffffff;
+}
+p.credits a:hover {
+  text-decoration: none;
+}
+
+footer span.space {
+  margin-left: 5px;
+}
