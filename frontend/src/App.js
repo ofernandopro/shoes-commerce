@@ -1,17 +1,16 @@
-import React, { Fragment } from 'react';
-import Header from "./components/Header";
-import MainBanner from "./components/MainBanner";
-import Products from "./components/Products";
-import Footer from "./components/Footer";
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import HomeScreen from './screens/HomeScreen';
+import ProductScreen from './screens/ProductScreen';
 
 function App() {
   return (
-    <div>
-      <Header />
-      <MainBanner />
-      <Products />
-      <Footer />
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={HomeScreen} />
+        <Route exact path='/product/:id' component={ProductScreen} />
+      </Switch>
+    </Router>
   );
 }
 
