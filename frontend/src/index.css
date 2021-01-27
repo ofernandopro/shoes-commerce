@@ -87,6 +87,10 @@ body {
   border-radius: 10px;
 }
 
+.col-1 .description-text {
+  color: gray;
+}
+
 .col-1 .box-price {
   padding: 15px 0px;
   background-color: #000000;
@@ -122,6 +126,37 @@ body {
   color: #20a202;
 }
 
-.error {
+.danger {
   color: #a02020;
+}
+
+.alert {
+  padding: 10px;
+  border: 1px solid transparent;
+  border: 5px;
+}
+
+.alert-info {
+  color: #2020a0;
+  background-color: #e0e0ff;
+}
+
+.alert-danger {
+  color: #a02020;
+  background-color: #ffe0e0e0;
+  border-radius: 3px;
+  padding: 10px 20px;
+  font-weight: 600;
+}
+.alert-danger i {
+  margin-right: 10px;
+}
+.white-space-30{
+  padding: 30px 0;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.loading-box {
+  background-color: #ffffff;
 }

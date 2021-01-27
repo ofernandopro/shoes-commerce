@@ -25,16 +25,18 @@ function ProductScreen(props) {
                 <h1>{product.name}</h1>
               </li>
               <li>
-                <Rating
-                  rating={product.rating}
-                  numReviews={product.numReviews}
-                ></Rating>
-                ({product.numReviews} Reviews)
+                <div className="row">
+                  <Rating
+                    rating={product.rating}
+                    numReviews={product.numReviews}
+                  ></Rating>
+                  ({product.numReviews} Reviews)
+                </div>
               </li>
               <li>Price: ${product.price}</li>
               <li>
                 Description:
-                <p>{product.description}</p>
+                <p className="description-text">{product.description}</p>
               </li>
             </ul>
           </div>
@@ -54,7 +56,7 @@ function ProductScreen(props) {
                       {product.countInStock > 0 ? (
                         <span className="success">In Stock</span>
                       ) : (
-                          <span className="error">Unavailable</span>
+                          <span className="danger">Unavailable</span>
                         )}
                     </div>
                   </div>
