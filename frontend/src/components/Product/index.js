@@ -23,7 +23,7 @@ function Product(props) {
           </div>
           <div className="row">
             <div className="price">
-              <h2>${product.price}</h2>
+              <h2>${product.price.toFixed(2)}</h2>
             </div>
             <Rating
               rating={product.rating}
