@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Rating from '../Rating';
 
 function Product(props) {
@@ -6,17 +7,17 @@ function Product(props) {
   return (
     <div>
       <div key={product._id} className="card">
-        <a href={`/product/${product._id}`}>
+        <Link to={`/product/${product._id}`}>
           <img
             className="medium"
             src={product.image}
             alt={product.name}
             width="250px" />
-        </a>
+        </Link>
         <div className="card-body">
-          <a href={`/product/${product._id}`}>
+          <Link to={`/product/${product._id}`}>
             <h3>{product.name}</h3>
-          </a>
+          </Link>
           <div className="text">
             <p>{product.description}</p>
           </div>

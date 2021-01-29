@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Rating from '../components/Rating';
@@ -11,12 +11,17 @@ import { detailsProduct } from '../actions/productActions';
 function ProductScreen(props) {
   const dispatch = useDispatch();
   const productId = props.match.params.id;
+  const [qnt, setQnt] = useState(1);
   const productDetails = useSelector((state) => state.productDetails);
   const { loading, error, product } = productDetails;
 
   useEffect(() => {
     dispatch(detailsProduct(productId));
   }, [dispatch, productId]);
+
+  const addToCartHandler = () => {
+    props.history.push(`/cart/${productId}?qnt=${qnt}`);
+  };
 
   return (
     <div>
@@ -27,29 +32,40 @@ function ProductScreen(props) {
       ) : (
             <Fragment>
               <Header />
+              <div className="back-to-result-link">
+                <i class="fas fa-arrow-left"></i>
+                <Link to="/">
+                  <p>Back to result</p>
+                </Link>
+              </div>
               <div className="pruduct-main-page">
-                <Link to="/">Back to result</Link>
                 <div className="row top">
                   <div className="col-2">
                     <img className="large" src={product.image} alt={product.name}></img>
                   </div>
-                  <div className="col-1">
+                  <div className="product-details">
                     <ul>
                       <li>
-                        <h1>{product.name}</h1>
-                      </li>
-                      <li>
-                        <div className="row">
+                        <div className="row-rating">
                           <Rating
                             rating={product.rating}
                             numReviews={product.numReviews}
                           ></Rating>
-                          ({product.numReviews} Reviews)
+                          <div className="qnt-reviews">({product.numReviews} Reviews)</div>
                         </div>
                       </li>
-                      <li>Price: ${product.price}</li>
-                      <li>
-                        Description:
+
+                      <li className="details-name">
+                        <h1>{product.name}</h1>
+                      </li>
+
+                      <li className="details-price">
+                        <h3>Price:</h3>
+                        <p>${product.price}</p>
+                      </li>
+
+                      <li className="description">
+                        <h3>Description: </h3>
                         <p className="description-text">{product.description}</p>
                       </li>
                     </ul>
@@ -59,8 +75,9 @@ function ProductScreen(props) {
                       <ul>
                         <li>
                           <div className="row">
-                            <div>Price:</div>
-                            <div className="price">${product.price}</div>
+                            <div className="price">
+                              <h2>${product.price}</h2>
+                            </div>
                           </div>
                         </li>
                         <li>
@@ -75,19 +92,48 @@ function ProductScreen(props) {
                             </div>
                           </div>
                         </li>
-                        <li>
-                          <div className="row">
-                            <button className="primary block">Add to Cart</button>
-                            <div className="box-price">
-                              | <span><i class="fas fa-shopping-basket"></i></span>
-                            </div>
-                          </div>
-                        </li>
+                        {
+                          product.countInStock > 0 && (
+                            <>
+                              <li>
+                                <div className="row">
+                                  <div>Quantity:</div>
+                                  <div>
+                                    <select className="select-qnt" value={qnt} onChange={(e) => setQnt(e.target.value)}>
+                                      {
+                                        [...Array(product.countInStock).keys()].map(
+                                          (x) => (
+                                            <option key={x + 1} value={x + 1}>
+                                              {x + 1}
+                                            </option>
+                                          )
+                                        )}
+                                    </select>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <div className="row">
+                                  <button onClick={addToCartHandler} className="primary block">Add to Cart</button>
+                                  <div onClick={addToCartHandler} className="box-price">
+                                    | <span><i class="fas fa-shopping-basket"></i></span>
+                                  </div>
+                                </div>
+                              </li>
+                            </>
+                          )
+                        }
+
                       </ul>
                     </div>
                   </div>
                 </div>
               </div>
+
+              <div className="reviews-section">
+
+              </div>
+
               <Footer />
             </Fragment>
           )
