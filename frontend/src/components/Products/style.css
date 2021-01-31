@@ -50,6 +50,10 @@ main {
   font-size: 20px;
 }
 
+.card-body h3 {
+  max-width: 240px;
+}
+
 .card .row {
   margin-bottom: 30px;
 }

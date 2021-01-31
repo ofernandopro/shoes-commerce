@@ -102,7 +102,7 @@ function CartScreen(props) {
                 <h3>
                   Subtotal:
                 </h3>
-                <p>Quantity: {cartItems.reduce((a, c) => a + c.qnt, 0)} items</p>
+                <p>Quantity: {cartItems.reduce((a, c) => a + c.qnt, 0)} item{cartItems.length > 1 ? 's' : ''}</p>
                 <p>Price:  <b>${cartItems.reduce((a, c) => a + c.price * c.qnt, 0).toFixed(2)}</b></p>
               </li>
               <li>
@@ -112,7 +112,7 @@ function CartScreen(props) {
                   className="proceed-checkout-button primary block"
                   disabled={cartItems.length === 0}
                 >
-                  <p>Proceed to Checkout</p> <i class="fas fa-arrow-right"></i>
+                  <p>Proceed to Checkout </p> <i class="fas fa-arrow-right"></i>
                 </button>
               </li>
             </ul>

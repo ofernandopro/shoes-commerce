@@ -1,8 +1,23 @@
+import bcrypt from 'bcryptjs';
+
 const data = {
+  users: [
+    {
+      name: 'Fernando',
+      email: 'admin@example.com',
+      password: bcrypt.hashSync('1234', 8),
+      isAdmin: true,
+    },
+    {
+      name: 'Kleber',
+      email: 'user@example.com',
+      password: bcrypt.hashSync('1234', 8),
+      isAdmin: false,
+    },
+  ],
   products: [
     {
-      _id: '1',
-      name: 'Adidas Sneakers Black',
+      name: 'Lacoste shoes sneakers ola',
       category: 'Sneakers',
       image: '/images/product-1.png',
       price: 119.90,
@@ -13,8 +28,7 @@ const data = {
       description: 'Sneakers Adidas color black extremely comfortable and ready for the day-to-day.',
     },
     {
-      _id: '2',
-      name: 'White Nike Sneakers',
+      name: 'Yellow shoes ola',
       category: 'Sneakers',
       image: '/images/nike-white.png',
       price: 99.90,
@@ -25,8 +39,7 @@ const data = {
       description: 'White sneakers Nike made for hanging outs.',
     },
     {
-      _id: '3',
-      name: 'Nike shoes',
+      name: 'Green shoes ola',
       category: 'Sneakers',
       image: '/images/nike-black.png',
       price: 199.90,
@@ -37,8 +50,7 @@ const data = {
       description: 'Black Nike Shoes for you to practice your daily exercises.',
     },
     {
-      _id: '4',
-      name: 'Lacoste Shoes',
+      name: 'Red Shoes ola',
       category: 'Shoes',
       image: '/images/product-1.png',
       price: 120.9,
@@ -49,8 +61,7 @@ const data = {
       description: 'Sneakers Nike color black extremely comfortable.',
     },
     {
-      _id: '5',
-      name: 'Adidas Sneakers Black',
+      name: 'Brown Sneaker ola',
       category: 'Sneakers',
       image: '/images/nike-black.png',
       price: 120.9,
@@ -61,8 +72,7 @@ const data = {
       description: 'Sneakers Nike color black extremely comfortable.',
     },
     {
-      _id: '6',
-      name: 'Adidas Sneakers Black',
+      name: 'Purple Sneakers ola',
       category: 'Sneakers',
       image: '/images/nike-white.png',
       price: 120.9,

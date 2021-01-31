@@ -49,10 +49,11 @@ body {
 
 .back-to-result-link i {
   margin: 30px 7px 0 30px;
+  color: #aaaaaa;
 }
 .back-to-result-link p {
   display: inline-block;
-  color: #000000;
+  color: #aaaaaa;
   text-decoration: underline;
 }
 

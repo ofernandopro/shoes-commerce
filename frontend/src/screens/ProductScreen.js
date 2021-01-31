@@ -61,7 +61,7 @@ function ProductScreen(props) {
 
                       <li className="details-price">
                         <h3>Price:</h3>
-                        <p>${product.price}</p>
+                        <p>${product.price.toFixed(2)}</p>
                       </li>
 
                       <li className="description">
@@ -76,7 +76,7 @@ function ProductScreen(props) {
                         <li>
                           <div className="row">
                             <div className="price">
-                              <h2>${product.price}</h2>
+                              <h2>${product.price.toFixed(2)}</h2>
                             </div>
                           </div>
                         </li>
