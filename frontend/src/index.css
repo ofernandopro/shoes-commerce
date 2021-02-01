@@ -232,6 +232,7 @@ body {
 }
 
 .loading-box {
+  display: block !important;
   background-color: #ffffff;
 }
 
