@@ -1,14 +1,23 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import './style.css';
 import MenuImg from '../../assets/menu.png';
 import CartImg from '../../assets/cart.png';
+import { signout } from '../../actions/userActions';
 
 function Header() {
 
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
+
+  const userSignin = useSelector((state) => state.userSignin);
+  const { userInfo } = userSignin;
+
+  const dispatch = useDispatch();
+  const signoutHandler = () => {
+    dispatch(signout());
+  }
 
   return (
     <header className="row">
@@ -22,7 +31,24 @@ function Header() {
       </div>
       <div>
         <div className="signin">
-          <Link className="sign-in-option" to="/signin">Sign In <i className="fas fa-sort-down"></i></Link>
+          {userInfo ? (
+            <div className="dropdown">
+              <Link className="sign-in-option" to="#">
+                {userInfo.name}
+                <i className="fas fa-sort-down"></i>
+              </Link>
+              <ul className="dropdown-content">
+                <Link to="#signout" onClick={signoutHandler}>
+                  Sign Out
+                </Link>
+              </ul>
+            </div>
+          ) : (
+              <Link className="sign-in-option" to="/signin">
+                Sign In
+                <i className="fas fa-sort-down"></i>
+              </Link>
+            )}
         </div>
         <div className="cart">
           <Link to="/cart">

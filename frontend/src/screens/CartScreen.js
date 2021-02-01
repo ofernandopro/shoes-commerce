@@ -119,6 +119,13 @@ function CartScreen(props) {
           </div>
         </div>
       </div>
+
+      <div className="back-to-result-link">
+        <i class="fas fa-arrow-left"></i>
+        <Link to="/">
+          <p>Back to Shopping</p>
+        </Link>
+      </div>
       <Footer />
     </Fragment>
   );

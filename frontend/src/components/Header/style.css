@@ -15,9 +15,6 @@ header a {
   text-decoration: none;
   font-weight: 600;
 }
-header a:hover {
-  color: #383b39;
-}
 
 a.brand {
   color: #000000;
@@ -32,6 +29,10 @@ a.sign-in-option {
   top: 0;
   margin-top: -20px;
   font-weight: 800;
+}
+
+.sign-in-option i {
+  margin-left: 5px;
 }
 
 img.menu-icon {
@@ -113,4 +114,32 @@ img.cart-icon {
   margin-bottom: 20px;
   font-family: Poppins, Arial, Helvetica, sans-serif;
   font-weight: 800;
+}
+
+/* Dropdown: */
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-content {
+  position: absolute;
+  display: none;
+  right: 0;
+  min-width: 120px;
+  padding: 10px;
+  z-index: 1;
+  background-color: #ffffff;
+  border-bottom: 1px solid #000000;
+  border-left: 1px solid #000000;
+  border-right: 1px solid #000000;
+  margin: 0;
+  margin-top: 4px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }

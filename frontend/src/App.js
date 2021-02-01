@@ -3,14 +3,16 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import CartScreen from './screens/CartScreen';
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
+import SigninScreen from './screens/SigninScreen';
 
 function App() {
   return (
     <Router>
       <Switch>
         <Route exact path='/cart/:id?' component={CartScreen}></Route>
-        <Route exact path="/" component={HomeScreen} />
         <Route exact path='/product/:id' component={ProductScreen} />
+        <Route path="/signin" component={SigninScreen} />
+        <Route exact path="/" component={HomeScreen} />
       </Switch>
     </Router>
   );

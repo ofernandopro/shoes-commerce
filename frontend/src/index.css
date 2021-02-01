@@ -220,6 +220,10 @@ body {
 }
 .alert-danger i {
   margin-right: 10px;
+
+}
+.alert-danger p {
+  display: inline-block;
 }
 .white-space-30{
   padding: 30px 0;
@@ -318,4 +322,52 @@ button.proceed-checkout-button:hover i {
 button.proceed-checkout-button:hover p {
   margin-left: 5px;
   transition: all ease 0.5s;
+}
+
+
+/* Signin Screen: */
+
+.form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px 30px 50px 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 30px #dddddd;
+}
+
+.form > div {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.form label {
+  margin: 10px 0;
+  display: block;
+}
+
+
+
+.form input {
+  padding: 10px;
+  font-size: 15px;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+}
+
+.form .message-box {
+  margin-bottom: -40px;
+}
+
+.form button {
+  padding: 12px;
+  font-size: 15px;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  background: linear-gradient(45deg, #000000, #454545);
+  border: 0;
+  border-radius: 3px;
+  font-weight: 700;
+  cursor: pointer;
 }
