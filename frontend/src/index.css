@@ -338,30 +338,32 @@ button.proceed-checkout-button:hover p {
   box-shadow: 0px 10px 30px #dddddd;
 }
 
-.form > div {
+.form > div,
+.form-shipping > div {
   display: flex;
   flex-direction: column;
   margin: 10px;
 }
 
-.form label {
+.form label,
+.form-shipping label {
   margin: 10px 0;
-  display: block;
 }
 
-
-
-.form input {
+.form input,
+.form-shipping input {
   padding: 10px;
   font-size: 15px;
   font-family: Poppins, Arial, Helvetica, sans-serif;
 }
 
-.form .message-box {
+.form .message-box,
+.form-shipping .message-box {
   margin-bottom: -40px;
 }
 
-.form button {
+.form button,
+.form-shipping button {
   padding: 12px;
   font-size: 15px;
   font-family: Poppins, Arial, Helvetica, sans-serif;
@@ -371,4 +373,26 @@ button.proceed-checkout-button:hover p {
   border-radius: 3px;
   font-weight: 700;
   cursor: pointer;
+}
+
+/* Shipping Screen*/
+
+.form-shipping {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 20px 30px 50px 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+}
+
+.form-shipping input {
+  border: 1px solid #cccccc;
+}
+
+/* Payment Screen: */
+
+input#stripe {
+  margin-bottom: 30px;
 }
