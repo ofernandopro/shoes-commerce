@@ -39,6 +39,10 @@ body {
   align-items: center;
 }
 
+.row ul li {
+  list-style-type: none;
+}
+
 .row.center {
   justify-content: center;
 }
@@ -396,3 +400,29 @@ button.proceed-checkout-button:hover p {
 input#stripe {
   margin-bottom: 30px;
 }
+
+/* Place Order Screen: */
+.place-order-screen {
+  padding: 30px 80px 30px 20px;
+} 
+
+.card-place-order {
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  margin-top: -20px;
+}
+
+.place-order-screen hr {
+  width: 90%;
+  height: 1px;
+  background-color: #dddddd;
+  border: 0;
+}
+
+.place-order-screen button {
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  margin-top: 0;
+}
+

@@ -7,6 +7,7 @@ import RegisterScreen from './screens/RegisterScreen';
 import ShippingAddressScreen from './screens/ShippingAddressScreen';
 import SigninScreen from './screens/SigninScreen';
 import PaymentMethodScreen from './screens/PaymentMethodScreen';
+import PlaceOrderScreen from './screens/PlaceOrderScreen';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/register" component={RegisterScreen} />
         <Route path="/shipping" component={ShippingAddressScreen} />
         <Route path="/payment" component={PaymentMethodScreen} />
+        <Route path="/placeorder" component={PlaceOrderScreen} />
         <Route exact path="/" component={HomeScreen} />
       </Switch>
     </Router>
