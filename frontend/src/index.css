@@ -421,6 +421,7 @@ input#stripe {
 
 .place-order-screen button {
   width: 100%;
+  background-color: #1b1321;
   text-align: center;
   padding: 15px;
   margin-top: 0;
