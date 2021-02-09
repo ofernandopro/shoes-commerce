@@ -222,6 +222,15 @@ body {
   padding: 10px 20px;
   font-weight: 600;
 }
+
+.alert-success {
+  color: #20a020;
+  background-color: #eeffe0;
+  border-radius: 3px;
+  padding: 10px 20px;
+  font-weight: 600;
+}
+
 .alert-danger i {
   margin-right: 10px;
 
