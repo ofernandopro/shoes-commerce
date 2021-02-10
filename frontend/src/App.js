@@ -9,6 +9,7 @@ import SigninScreen from './screens/SigninScreen';
 import PaymentMethodScreen from './screens/PaymentMethodScreen';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
 import OrderScreen from './screens/OrderScreen';
+import OrderHistoryScreen from './screens/OrderHistoryScreen';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/payment" component={PaymentMethodScreen} />
         <Route path="/placeorder" component={PlaceOrderScreen} />
         <Route path="/order/:id" component={OrderScreen} />
+        <Route path="/orderhistory" component={OrderHistoryScreen} />
         <Route exact path="/" component={HomeScreen} />
       </Switch>
     </Router>

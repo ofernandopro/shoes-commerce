@@ -127,8 +127,8 @@ img.cart-icon {
   position: absolute;
   display: none;
   right: 0;
-  min-width: 120px;
-  padding: 10px;
+  min-width: 150px;
+  padding: 3px;
   z-index: 1;
   background-color: #ffffff;
   border-bottom: 1px solid #000000;
@@ -138,6 +138,10 @@ img.cart-icon {
   margin-top: 4px;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
+}
+
+.dropdown-content li {
+  margin-bottom: 10px;
 }
 
 .dropdown:hover .dropdown-content {

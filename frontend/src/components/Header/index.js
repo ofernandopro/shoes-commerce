@@ -38,9 +38,16 @@ function Header() {
                 <i className="fas fa-sort-down"></i>
               </Link>
               <ul className="dropdown-content">
+                <li>
+                <Link to="/orderhistory">
+                  Order History
+                </Link>
+                </li>
+                <li>
                 <Link to="#signout" onClick={signoutHandler}>
                   Sign Out
                 </Link>
+                </li>
               </ul>
             </div>
           ) : (
