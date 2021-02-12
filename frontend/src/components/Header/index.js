@@ -58,7 +58,6 @@ function Header() {
           ) : (
               <Link className="sign-in-option" to="/signin">
                 Sign In
-                <i className="fas fa-sort-down"></i>
               </Link>
             )}
         </div>
