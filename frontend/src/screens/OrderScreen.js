@@ -136,7 +136,7 @@ function OrderScreen(props) {
           </div>
         </div>
         <div className="col-1">
-          <div className="card card-body card-body-place-order">
+          <div className="card card-body-place-order">
               <div>
                 <h2>Order Summary</h2>
               </div>
