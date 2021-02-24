@@ -1,8 +1,7 @@
-To do: 
+Shoes Commerce (Not finished yet)
 
-() - Mudar px para rem
+Ecommerce platform to sell products, especifically shoes/sneakers. It was created with React and Redux in the Front-end and NodeJS in the Back-end. Redux was added to make the website more dynamic, in which it makes updatings in real time as the user clicks in add to cart, for instance, or when it updates his username and the name in the header changes right away. 
 
+The first page shows all the products and the header, which contains a search box that has not been implemented in the Back-end yet. In the header you can also access the items in the cart (different page), the users 
 
-
-Mudei !order._id para !order em um if dentro de um useEffect do arquivo OrderScreen.js
-!order._id foi usado na aula mas tava dando errado, chequei o codigo no github e parece q ele colocou !order mesmo
+<img src="imagesdoc/homepage.png" />
